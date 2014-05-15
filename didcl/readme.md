@@ -16,6 +16,7 @@ Install Node.js on the server (current Version: v0.10.12) and copy all the sourc
 ##Client UI##
 
 ![Image](screenshot.png)
+![Image](screenshot2.png)
 
 Only a small subset of functions are exposed in this demo.
 

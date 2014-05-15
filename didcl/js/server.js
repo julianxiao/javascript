@@ -8,16 +8,6 @@ var message = new Buffer(5),
     sensor_timeout = 0,
     query_emitter = new(require('events').EventEmitter);
 
-function sendTestPacket() {
-    client.send(message, 0, message.length, 8888, '192.168.1.160', function (err, bytes) {
-        if (err != null) {
-            sys.puts('UDP send error:' + err);
-            client.close();
-        }
-    });
-}
-
-
 client.on('message', function (msg, rinfo) {
     var bytes = [],
         headerIndex = 10;
@@ -58,6 +48,16 @@ client.on('listening', function () {
 
 
 client.bind(12344);
+
+function sendTestPacket() {
+    client.send(message, 0, message.length, 8888, '192.168.1.160', function (err, bytes) {
+        if (err != null) {
+            sys.puts('UDP send error:' + err);
+            client.close();
+        }
+    });
+}
+
 
 var sys = require('sys'),
     http = require('http'),

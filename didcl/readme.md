@@ -5,7 +5,7 @@ By Jun Xiao
 
 ## Introduction
 
-DIDCL is a prototype software for LED light duct control written with [node.js](http://nodejs.org) and [jQuery Mobile](http://jquerymobile.com).
+Prototype software for LED light duct control written with [node.js](http://nodejs.org) and [jQuery Mobile](http://jquerymobile.com). Could have used [Express](http://expressjs.com) to define the routes for RESTful API.
 
 
 ##Demo Network setup##

@@ -1,3 +1,3 @@
 javascript
 ==========
-Javascript programming
+Javascript and web stuff

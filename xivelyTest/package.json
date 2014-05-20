@@ -1,0 +1,9 @@
+{
+	"name": "xivelyTest",
+	"main": "server.js",
+	"dependencies": {
+		"express": "~3.x",
+		"mongoose": "~3.6.13",
+		"body-parser": "~1.0.1"
+	}
+}

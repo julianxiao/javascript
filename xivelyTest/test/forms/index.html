@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title>Sensor Analytics Input Form Template</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="jquery/jquery-2.1.1.min.js"></script>
+    
+    <script src="js/custom.js"></script>
+    <script>
+        //'local', 'ESL' or 'heroku'
+        serverAddress = 'local';
+    </script>
+
+    <link href="css/starter-template.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>Sensor Analytics Input Form Template </h1>
+            <p>Last updated: March 15, 2014</p>
+        </div>
+    </div>
+
+    <div class="container-fluid  container-lg-height">
+        <div class="row row-lg-height">
+            <div class="col-md-4 sidebar col-xs-height">
+                <div class="row">
+                    <ul class="list-group" id="target"></ul>
+
+                </div>
+            </div>
+            <div class="col-md-8 col-xs-height">
+
+                <form id="inputForm">
+                    <div class="form-group">
+                        <label for="textinput">Textbox</label>
+                        <input type="text" class="form-control" name="textinputLine" placeholder="One line of text">
+                    </div>
+                    <div class="form-group">
+                        <label for="textinputMulti">Text Area</label>
+                        <textarea class="form-control" name="textinputMulti" placeholder="Mutliple lines of text"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="radio">Radio Options:</label>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="radio" name="radio" value="option1">Option 1
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="radio" name="radio" value="option2">Option 2
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="radio" name="radio" value="option3">Option 3
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="options">Check Options:</label>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox" name="check" value="check1">Option 1
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" name="check" value="check2">Option 2
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox" name="check" value="check3">Option 3
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="options ">Select list</label>
+                        <select class="form-control " name="selectList ">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+
+                        <label for="name ">Mutiple Select list</label>
+                        <select multiple class="form-control " name="multiSelect ">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" id="exampleInputFile" name="exampleInputFile">
+                        <p class="help-block">Example block-level help text here.</p>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="check" value="check4">Check me out
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-default btn-lg has-spinner" value="submit" id="submitButton">Submit</button>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div>&copy;3M ESL 2014</div>
+            </div>
+        </div>
+        <div class="container">
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

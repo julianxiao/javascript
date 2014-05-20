@@ -1,0 +1,21 @@
+{
+  "name": "heroku-test",
+  "version": "0.0.0",
+  "description": "This is a JSONP test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "JSONP",
+    "test"
+  ],
+  "author": "Jun Xiao",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.2.0",
+    "logfmt": "~1.1.2",
+    "mongodb": "~1.4.4"
+  }
+}

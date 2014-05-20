@@ -1,0 +1,152 @@
+git add .
+git commit -m "init"
+git push heroku master
+
+heroku ps
+
+Host heroku.com
+Hostname heroku.com 
+Port 22 
+IdentitiesOnly yes 
+IdentityFile ~/.ssh/heroku_mmm
+TCPKeepAlive yes
+User jxiao
+
+git clean -df & git checkout .
+git clean removes all untracked files and git checkout clears all unstaged changes
+
+
+
+npm install redis-url --save
+var redis = require('redis-url').connect(process.env.REDISTOGO_URL);
+redis.set('foo', 'bar');
+redis.get('foo', function(err, value) {
+  console.log('foo is: ' + value);
+});
+
+
+                    <span class="bottomaligned"> 
+                        <button type="button" class="btn btn-default btn-sm">
+                         <span class="glyphicon glyphicon-remove"></span> Clear
+                        </button>
+                    </span>
+
+https://github.com/mranney/node_redis
+http://stackoverflow.com/questions/5656991/node-js-redis-tutorial
+    client.set("string key", "string val", redis.print);
+    client.hset("hash key", "hashtest 1", "some value", redis.print);
+    client.hset(["hash key", "hashtest 2", "some other value"], redis.print);
+    client.hkeys("hash key", function (err, replies) {
+        console.log(replies.length + " replies:");
+        replies.forEach(function (reply, i) {
+            console.log("    " + i + ": " + reply);
+        });
+        client.quit();
+    });
+
+
+install homebrew
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
+Installing npm
+curl http://npmjs.org/install.sh | sh
+
+install redis
+curl -O http://download.redis.io/redis-stable.tar.gz 
+tar -xvzf redis-stable.tar.gz rm redis-stable.tar.gz 
+cd redis-stable 
+make sudo make install 
+
+redis-server
+redis-cli ping
+redis-cli shutdown
+
+export PATH=$PATH:/new/path
+
+
+ require my routes in the app.js:
+
+var express = require('express')
+  , site = require('./site')
+  , wiki = require('./wiki');
+And I add my routes like this:
+
+app.get('/', site.index);
+app.get('/wiki/:id', wiki.show);
+app.get('/wiki/:id/edit', wiki.edit);
+I have two files called wiki.js and site.js in the root of my app, containing this:
+
+exports.edit = function(req, res) {
+
+    var wiki_entry = req.params.id;
+
+    res.render('wiki/edit', {
+        title: 'Editing Wiki',
+        wiki: wiki_entry
+    })
+}
+
+http://expressjs.com/guide.html
+http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4
+https://devcenter.heroku.com/articles/getting-started-with-nodejs
+
+https://github.com/mranney/node_redis
+http://www.rediscookbook.org/introduction_to_storing_objects.html
+http://openmymind.net/2011/7/5/Rethink-your-Data-Model/
+http://openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-2/
+
+http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
+
+http://scotch.io/bar-talk/setting-up-a-mean-stack-single-page-application
+http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular
+
+mongod --dbpath /Users/junxiao/Desktop/work/project/ESP/test/db
+sudo mkdir -p /data/db
+
+$ sudo mkdir -p /data/db
+$ whoami
+mkyong
+$ sudo chown mkyong /data/db
+
+ sudo vim /Library/LaunchDaemons/mongodb.plist
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>mongodb</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/mongodb/bin/mongod</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>WorkingDirectory</key>
+  <string>/usr/local/mongodb</string>
+  <key>StandardErrorPath</key>
+  <string>/var/log/mongodb/error.log</string>
+  <key>StandardOutPath</key>
+  <string>/var/log/mongodb/output.log</string>
+</dict>
+</plist>
+
+$ sudo launchctl load /Library/LaunchDaemons/mongodb.plist
+ 
+$ ps -ef | grep mongo
+
+npm install grunt-cli -g
+
+npm update -g npm
+npm update -g grunt-cli
+npm cache clean
+bower cache clean
+
+behind firewall
+git config --global url."https://".insteadOf git://
+
+
+http://howtonode.org/node-js-and-mongodb-getting-started-with-mongojs

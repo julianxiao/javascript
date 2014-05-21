@@ -14,8 +14,8 @@ module.exports = function (app) {
     // sample api route
     app.post('/api/xively', function (req, res) {
 
-        var xively = new Xively(); // create a new instance of the Bear model
-        xively.xivelyPostData = req.body; // set the bears name (comes from the request)
+        var xively = new Xively(); 
+        xively.xivelyPostData = req.body; 
 
         xively.save(function (err) {
             // if there is an error retrieving, send the error. nothing after res.send(err) will execute
@@ -30,11 +30,11 @@ module.exports = function (app) {
 
     app.get('/api/xively', function (req, res) {
 
-        Xively.find(function (err, xively) {
+        Xively.find(function (err, xivelies) {
             if (err)
                 res.send(err);
 
-            res.json(xively);
+            res.json(xivelies);
         });
     });
 
